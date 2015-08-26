@@ -1,0 +1,9 @@
+<h6 class = twelve columns>
+
+  <%= @fooditems.name%> <%= @fooditems.price%><%= @fooditems.cusine%> <%= @fooditems.allergens%></h6>
+
+
+  <form action="/fooditems/<%=@fooditems.id%>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <button type="submit" >Remove</button>
+  </form>

@@ -1,0 +1,13 @@
+<h1>parties</h1>
+<div class="row">
+
+
+<ul class = "five rows">
+  <%@parties.each do |party|%>
+    <li>
+    <%=party.table_number%><%=party.num_guests%> <%=party.paid%>
+    </li>
+    <% end%>
+
+</ul>
+</div>

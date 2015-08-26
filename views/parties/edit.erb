@@ -1,0 +1,15 @@
+
+
+
+<div class="row">
+
+
+<form class="six columns" action="/parties/<%=@parties.id%>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <input type="text" name="party[table_number]" placeholder="<%=@parties.table_number%>">
+  <input type="text" name="party[num_guests]" placeholder="<%=@parties.num_guests%>">
+  <input type="text" name="party[paid]" placeholder="<%=@parties.paid%>">
+  <input class="submit" type="submit" value="Update Party">
+</form>
+
+</div>

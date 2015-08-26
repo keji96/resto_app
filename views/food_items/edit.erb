@@ -1,0 +1,13 @@
+<div class="row">
+
+
+<form class="six columns" action="/fooditems/<%=@fooditems.id%>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <input type="text" name="fooditem[name]" placeholder="<%=@fooditems.name%>">
+  <input type="text" name="fooditem[cusine]" placeholder="<%=@fooditems.cusine%>">
+  <input type="text" name="fooditem[price]" placeholder="<%=@fooditems.price%>">
+  <input type="text" name="fooditem[allergens]" placeholder="<%=@fooditems.allergens%>">
+  <input class="submit" type="submit" value="Update FoodItem">
+</form>
+
+</div>
