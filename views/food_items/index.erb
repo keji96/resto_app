@@ -1,4 +1,4 @@
-<h1>Food Items</h1>
+<h1>Menu</h1>
 
 
 <div class="row">
@@ -7,9 +7,20 @@
 <ul class = "five rows">
   <%@fooditems.each do |fooditem|%>
     <li>
-    <%=fooditem.name%>
+    <%=fooditem.name%><form action="/fooditems/<%=fooditem.id%>/edit">
+      <input class="one column" type="submit" value="Add Another Item">
+    </form><form action="/fooditems/<%=fooditem.id%>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <button type="submit" >Remove</button>
+    </form>
+
     </li>
     <% end%>
 
 </ul>
 </div>
+
+
+<form action="/fooditems/new">
+  <input class="four columns" type="submit" value="Add Another Item">
+</form>

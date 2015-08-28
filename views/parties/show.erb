@@ -1,8 +1,39 @@
-<h6 class = twelve columns>
-  <%= @parties.table_number%> <%= @parties.num_guests%><%= @parties.paid%> </h6>
+<h1 class="twelve columns">
+  Reciept for table <%= @party.table_number%> which had <%= @party.num_guests%> guests the bill is <%= @partyspaid%> </h1>
 
+<table>
+<th>
+  <td>
+    Item name
+  </td>
+  <td>
+    Item price
+  </td>
+</th>
 
-  <form action="/parties/<%=@parties.id%>" method="post">
+<%@party.food_items.each do |fooditem| %>
+  <tr>
+    <td>
+      <%=fooditem.name%>
+    </td>
+    <td>
+      $<%=fooditem.price%>
+    </td>
+  </tr>
+
+  <%end%>
+
+  <tr>
+    <td>
+      TOTAL
+    </td>
+    <td>
+      $<%= @party.total %>
+    </td>
+  </tr>
+</table>
+
+  <form action="/parties/<%=@party.id%>" method="post">
       <input type="hidden" name="_method" value="delete">
       <button type="submit" >Remove</button>
   </form>

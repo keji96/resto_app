@@ -2,11 +2,21 @@
 
 
 <form class="six columns" action="/orderitems" method="post">
-  <input type="text" name="orderitem[name]" placeholder="Food Item name">
-  <input type="text" name="orderitem[cusine]" placeholder="Cusine">
-  <input type="text" name="orderitem[price]" placeholder="Price">
-  <input type="text" name="orderitem[allergens]" placeholder="Allergens">
-  <input class="submit" type="submit" value="Create new Order">
+
+  <select  name="oderitem[food_item_id]">
+    <%@fooditems.each do |fooditem| %>
+      <option value="<%=fooditem.id%>"><%=fooditem.name%></option>
+    <%end%>
+
+  </select>
+
+  <select  name="oderitem[party_id]">
+    <%@parties.each do |party| %>
+      <option value="<%=party.id%>"><%=party.table_number%></option>
+    <%end%>
+  </select>
+
+  <input class="submit" type="submit" value="Create new order">
 </form>
 
 </div>

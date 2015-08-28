@@ -1,13 +1,54 @@
 <h1>parties</h1>
+
+
+
 <div class="row">
 
 
 <ul class = "five rows">
-  <%@parties.each do |party|%>
-    <li>
-    <%=party.table_number%><%=party.num_guests%> <%=party.paid%>
-    </li>
-    <% end%>
+<%@parties.each do |party|%>
+  <table>
+
+<th>
+  <tr>
+    <td>
+      Table Number
+    </td>
+    <td>
+      Number of people
+    </td>
+    <td>
+      Paid in full?
+    </td>
+  </tr>
+</th>
+<tr>
+
+  <td>
+  <a href="/parties/<%=party.id%>">
+    <%=party.table_number%>
+  </a>
+  </td>
+  <td>
+    <a href="/parties/<%=party.id%>">
+    <%=party.num_guests%>
+  </a>
+  </td>
+  <td>
+    <a href="/parties/<%=party.id%>">
+    <%=party.paid%>
+  </a>
+  </td>
+
+</tr>
+
+  </table>
+
+
+
+
+
+    <%end%>
 
 </ul>
 </div>

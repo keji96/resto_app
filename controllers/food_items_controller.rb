@@ -40,7 +40,7 @@ put '/:id' do
   redirect "/fooditems/#{fooditem.id}"
 end
 
-delete '/1' do
+delete '/:id' do
     fooditem = FoodItem.find(params[:id])
     fooditem.delete()
     redirect '/fooditems'

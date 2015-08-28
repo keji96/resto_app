@@ -1,1 +1,58 @@
 <h1>Items</h1>
+<%@orderitem.each do |orderitem|%>
+<table class="order">
+
+  <th>
+    <tr>
+      <td>
+        Table number
+      </td>
+      <td>
+        food item
+      </td>
+      <td>
+        price
+      </td>
+      <td>
+        Time of order
+      </td>
+      <td>
+        Minutes since order was submitted
+      </td>
+    </tr>
+  </th>
+
+<tbody>
+
+ <tr>
+   <td class="orders">
+     <%=orderitem.party.table_number%>
+
+   </td>
+   <td class="orders">
+<%=orderitem.food_item.name%>
+   </td>
+
+   <td class="orders">
+     <%=orderitem.food_item.price%>
+
+    </td>
+
+    <td class="orders">
+      <%=orderitem.created_at%>
+    </td>
+    <td class="orders_time" data-value='<%=@time%>'>
+      <%@time = ((Time.now - orderitem.created_at)/60).round%>
+      <%=@time%>
+    </td>
+    <td>
+      <input class="orderButtons" type="button" name="name" value="Order-Up">
+    </td>
+  </tr>
+</tbody>
+</table>
+<% end%>
+
+<div class="time_orders" data-value='<%=@time%>'>
+  
+</div>

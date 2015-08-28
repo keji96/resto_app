@@ -1,3 +1,36 @@
 <h6 class = twelve columns>
 
-  <%= @parties.table_number%> <%= @parties.num_guests%><%= @parties.paid%> </h6>
+
+  <table>
+    <th>
+      <tr>
+        <td>
+          Table number
+        </td>
+        <td>
+          Food Item
+        </td>
+        <td>
+          price
+        </td>
+      </tr>
+    </th>
+
+    <tr>
+     <td>
+    <%=@orderitem.party.table_number%>
+      </td>
+      <td>
+        <%=@orderitem.food_item.name%>
+      </td>
+      <td>
+        <%=@orderitem.food_item.price%>
+      </td>
+      <td>
+      <form action="/orderitems/<%=@orderitem.id%>" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <button type="submit" >Remove</button>
+      </form>
+    </td>
+    </tr>
+  </table>

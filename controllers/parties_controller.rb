@@ -22,7 +22,7 @@ end
 
 #Show Individual party
 get '/:id' do
-  @parties = Party.find(params[:id])
+  @party = Party.find(params[:id])
   erb :'/parties/show'
 end
 
@@ -41,7 +41,7 @@ end
 
 delete '/:id' do
      party = Party.find(params[:id])
-     party.delete()
+     party.destroy()
      redirect '/parties'
   end
 
