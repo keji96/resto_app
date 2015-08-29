@@ -42,7 +42,7 @@ end
 
 delete '/:id' do
     fooditem = FoodItem.find(params[:id])
-    fooditem.delete()
+    fooditem.destroy()
     redirect '/fooditems'
   end
 

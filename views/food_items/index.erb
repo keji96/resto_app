@@ -1,26 +1,55 @@
 <h1>Menu</h1>
-
-
+<hr>
 <div class="row">
 
 
-<ul class = "five rows">
-  <%@fooditems.each do |fooditem|%>
-    <li>
-    <%=fooditem.name%><form action="/fooditems/<%=fooditem.id%>/edit">
-      <input class="one column" type="submit" value="Add Another Item">
-    </form><form action="/fooditems/<%=fooditem.id%>" method="post">
+<table class="menuTable">
+  <tr >
+    <th >
+      Item
+    </th>
+     <th>
+       Price
+     </th>
+     <th>
+       Cusine
+     </th>
+     <th>
+       Allergens
+     </th>
+ <%@fooditems.each do |fooditem|%>
+
+ <tr>
+   <td >
+     <%=fooditem.name%>
+    </td>
+    <td>
+      <%=fooditem.price%>
+    </td>
+    <td>
+      <%=fooditem.cusine%>
+    </td>
+    <td>
+      <%=fooditem.allergens%>
+    </td>
+    <td>
+      <form action="/fooditems/<%=fooditem.id%>/edit">
+        <input class="menuButton five columns" type="submit" value="E">
+      </form>
+      <form action="/fooditems/<%=fooditem.id%>" method="post">
         <input type="hidden" name="_method" value="delete">
-        <button type="submit" >Remove</button>
-    </form>
+        <input class="menuButton five columns" type="submit" value="R">
+      </form>
+    </td>
+  </tr>
 
-    </li>
-    <% end%>
-
-</ul>
+<% end%>
+</table>
 </div>
-
 
 <form action="/fooditems/new">
   <input class="four columns" type="submit" value="Add Another Item">
+</form>
+<form action="/">
+  <input class="four columns" type="submit" value="Main Menu">
 </form>

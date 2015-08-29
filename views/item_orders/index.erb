@@ -1,58 +1,41 @@
-<h1>Items</h1>
+<h1>Ordered Items</h1>
+
+
+<table class="order six columns">
+  <tr >
+    <th>
+      Table number
+    </th>
+    <th>
+      food item
+    </th>
+
+    <th>
+      Order Length
+    </th>
+    <th>
+      Order complete
+    </th>
+  </tr>
 <%@orderitem.each do |orderitem|%>
-<table class="order">
-
-  <th>
-    <tr>
-      <td>
-        Table number
-      </td>
-      <td>
-        food item
-      </td>
-      <td>
-        price
-      </td>
-      <td>
-        Time of order
-      </td>
-      <td>
-        Minutes since order was submitted
-      </td>
-    </tr>
-  </th>
-
-<tbody>
-
  <tr>
-   <td class="orders">
+   <td >
      <%=orderitem.party.table_number%>
-
    </td>
-   <td class="orders">
-<%=orderitem.food_item.name%>
+   <td>
+     <%=orderitem.food_item.name%>
    </td>
-
-   <td class="orders">
-     <%=orderitem.food_item.price%>
-
-    </td>
-
-    <td class="orders">
-      <%=orderitem.created_at%>
-    </td>
-    <td class="orders_time" data-value='<%=@time%>'>
+  <td class="orders_time" id='<%=orderitem.id%>' data-value='<%=((Time.now - orderitem.created_at)/60).round%>'>
       <%@time = ((Time.now - orderitem.created_at)/60).round%>
       <%=@time%>
-    </td>
-    <td>
-      <input class="orderButtons" type="button" name="name" value="Order-Up">
-    </td>
+  </td >
+  <td>
+      <input class="orderButtons four columns" type="button" name="name" value="Done">
+  </td>
   </tr>
-</tbody>
-</table>
-<% end%>
 
-<div class="time_orders" data-value='<%=@time%>'>
-  
-</div>
+<% end%>
+</table>
+<form action="/">
+  <input class="four columns" type="submit" value="Main Menu">
+</form>

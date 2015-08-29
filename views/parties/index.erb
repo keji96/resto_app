@@ -5,50 +5,37 @@
 <div class="row">
 
 
-<ul class = "five rows">
-<%@parties.each do |party|%>
-  <table>
-
-<th>
+<div class = "five rows">
+<table>
   <tr>
-    <td>
+    <th>
       Table Number
-    </td>
-    <td>
+    </th>
+    <th>
       Number of people
-    </td>
-    <td>
+    </th>
+    <th>
       Paid in full?
-    </td>
+    </th>
   </tr>
-</th>
+<%@parties.each do |party|%>
+
 <tr>
-
   <td>
-  <a href="/parties/<%=party.id%>">
+<a href="/parties/<%=party.id%>">
     <%=party.table_number%>
-  </a>
+</a>
   </td>
   <td>
-    <a href="/parties/<%=party.id%>">
+
     <%=party.num_guests%>
-  </a>
+
   </td>
   <td>
-    <a href="/parties/<%=party.id%>">
     <%=party.paid%>
-  </a>
   </td>
+ </tr>
 
-</tr>
-
-  </table>
-
-
-
-
-
-    <%end%>
-
-</ul>
+<%end%>
+</table>
 </div>

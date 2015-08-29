@@ -1,0 +1,86 @@
+body{
+  background-color: black;
+  color:red
+}
+
+
+h1{
+  text-align: center;
+
+}
+
+img{
+  position absolute;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input {
+ border: 0px;
+ padding: 0px;
+ font-size: 20px;
+ font-style: italic;
+ outline: none;
+ background-color: yellow;
+}
+input[type="submit"] {
+ background: black;
+ color: yellow;
+ font-size: 15px;
+ font-style: italic;
+}
+input[type="text"] {
+ border: 0;
+ border-bottom: 3px solid grey;
+}
+input[type="text"]:focus {
+ border: 0;
+ border-bottom: 3px solid lightgrey;
+}
+
+.order{
+
+  color: white;
+}
+
+.orders_time{
+  width: 10%;
+  background-color: red;
+
+}
+
+.eight{
+ top:-20%;
+ left: 30%;
+}
+
+#index input {
+  display: inline-block;
+  background-color: red;
+  width: 100%;
+}
+
+#index {
+  margin: 10px;
+}
+
+.menuButton{
+  width: 5%;
+  padding: 0px;
+ margin: 0px;
+margin-left: 0px;
+margin-right: 0px;
+font-size: 5px;
+
+}
+
+.menuTable{
+  font-size: 15px;
+}
+
+td{
+  padding: 0px;
+  margin: 0px;
+
+}

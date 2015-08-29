@@ -1,15 +1,15 @@
-<h1 class="twelve columns">
-  Reciept for table <%= @party.table_number%> which had <%= @party.num_guests%> guests the bill is <%= @partyspaid%> </h1>
+<h4 class="twelve columns">
+  Reciept for table <%= @party.table_number%> which had <%= @party.num_guests%> guests. The bill paid? <%= @party.paid%> </h4>
 
-<table>
-<th>
-  <td>
+<table class="reciept twelve columns">
+<tr>
+  <th>
     Item name
-  </td>
-  <td>
+  </th>
+  <th>
     Item price
-  </td>
-</th>
+  </th>
+</tr>
 
 <%@party.food_items.each do |fooditem| %>
   <tr>

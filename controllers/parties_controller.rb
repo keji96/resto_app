@@ -46,10 +46,10 @@ delete '/:id' do
   end
 
 
- # delete '/:id' do
- #    party = Party.find(params[:id])
- #    party.delete()
- #    redirect '/parties'
- #  end
+ delete '/:id' do
+    party = Party.find(params[:id])
+    party.destroy()
+    redirect '/parties'
+  end
 
 end
