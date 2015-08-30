@@ -7,9 +7,9 @@
 - Main menu is the portal to the rest of the application
 ![alt text](Resto_screen_shot.jpg "Main Menu screen shot")
 - The menu screen can be access by pushing the Administrator. The menu screen allows the Administrator to add edit(e) and remove(r) food items form the menu.  
-![alt text](menu.png "Menu screen shot")
+![alt text](Menu.png "Menu screen shot")
 - Waiters can manage tables through the Table management interface. Here waiters can add tables service existing tables and print out customer receipts.
-![alt text](waiters.png "Menu screen shot")
+![alt text](Waiters.png "Menu screen shot")
 -Chefs can manage the outstanding orders through the order management interface
 ![alt text](chef.png "Menu screen shot")
 ##Technologies
@@ -29,4 +29,4 @@
 
 - As a user I would like generate a receipt so that I can keep customers uptodate on how much they have spent.
 
-- As a user I would like to know when orders came into the kitchen and how long before they are made so that I can prioritize which dishes need to be made. 
+- As a user I would like to know when orders came into the kitchen and how long before they are made so that I can prioritize which dishes need to be made.
