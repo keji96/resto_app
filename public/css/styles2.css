@@ -27,7 +27,7 @@ input {
 input[type="submit"] {
  background: black;
  color: yellow;
- font-size: 15px;
+ font-size: 10px;
  font-style: italic;
 }
 input[type="text"] {
@@ -83,4 +83,11 @@ td{
   padding: 0px;
   margin: 0px;
 
+}
+
+
+.partyButton{
+  padding: 0px;
+  margin: -3px;
+  font-size: 5px
 }

@@ -1,25 +1,32 @@
+<h2>Add to order</h2>
+
 <div class="row">
 
 
 <form class="six columns" action="/orderitems" method="post">
 
- <%@fooditems.each do |fooditem| %>
- <input type="checkbox" name="oderitem[food_item_id][]" value="<%=fooditem.id%>"/><%=fooditem.name%></input>
-  <%end%>
+  <h6>Item</h6>
+  <select  name="oderitem[food_item_id]">
+    <%@fooditems.each do |fooditem| %>
+      <option value="<%=fooditem.id%>"><%=fooditem.name%></option>
+    <%end%>
 
-  <input class="submit" type="submit" value="Create new order">
+  </select>
+
+<h6>Table</h6>
+  <select  name="oderitem[party_id]">
+    <%@parties.each do |party| %>
+      <option value="<%=party.id%>"><%=party.table_number%></option>
+    <%end%>
+  </select>
+
+<br>
+  <input class="submit" type="submit" value="Create order">
+</form>
+
+<br>
+<form action="/parties/">
+  <input class="button three columns" type="submit" value="Finished">
 </form>
 
 </div>
-<!-- <select  name="oderitem[food_item_id]">
-  <%@fooditems.each do |fooditem| %>
-    <option value="<%=fooditem.id%>"><%=fooditem.name%></option>
-  <%end%>
-
-</select>
-
-<select  name="oderitem[party_id]">
-  <%@parties.each do |party| %>
-    <option value="<%=party.id%>"><%=party.table_number%></option>
-  <%end%>
-</select> -->

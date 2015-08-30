@@ -1,11 +1,11 @@
-<h1>parties</h1>
+<h1>Tables</h1>
 
 
 
 <div class="row">
 
 
-<div class = "five rows">
+<div class="twelve rows">
 <table>
   <tr>
     <th>
@@ -22,9 +22,7 @@
 
 <tr>
   <td>
-<a href="/parties/<%=party.id%>">
     <%=party.table_number%>
-</a>
   </td>
   <td>
 
@@ -34,8 +32,23 @@
   <td>
     <%=party.paid%>
   </td>
- </tr>
+  <td>
+    <form action="/orderitems/new">
+      <input class="partyButton" type="submit" value="Service">
+    </form>
+    <form action="/parties/<%=party.id%>">
+      <input class="partyButton" type="submit" value="Reciept">
+    </form>
+  </td>
 
+ </tr>
 <%end%>
 </table>
+<form action="/parties/new">
+  <input class="button three columns" type="submit" value="Add new table">
+</form>
+<form action="/">
+  <input class="three columns" type="submit" value="Main Menu">
+</form>
+
 </div>

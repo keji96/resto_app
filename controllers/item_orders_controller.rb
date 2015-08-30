@@ -19,7 +19,7 @@ class ItemOrdersController < ApplicationController
 #creating a new order
   post '/' do
     OrderItem.create(params[:oderitem])
-    redirect '/orderitems'
+    redirect '/orderitems/new'
   end
 
   #Show Individual Food Item
