@@ -3,7 +3,8 @@
 <div class="row">
 
 
-<table class="menuTable">
+<table class="menuTable u-full-width">
+
   <tr >
     <th >
       Item
@@ -17,6 +18,8 @@
      <th>
        Allergens
      </th>
+
+
  <%@fooditems.each do |fooditem|%>
 
  <tr>
@@ -34,11 +37,11 @@
     </td>
     <td>
       <form action="/fooditems/<%=fooditem.id%>/edit">
-        <input class="menuButton five columns" type="submit" value="E">
+        <input class="menuButton twelve columns" type="submit" value="E">
       </form>
       <form action="/fooditems/<%=fooditem.id%>" method="post">
         <input type="hidden" name="_method" value="delete">
-        <input class="menuButton five columns" type="submit" value="R">
+        <input class="menuButton twelve columns" type="submit" value="R">
       </form>
     </td>
   </tr>
@@ -48,8 +51,8 @@
 </div>
 
 <form action="/fooditems/new">
-  <input class="four columns" type="submit" value="Add Another Item">
+  <input class="twelve columns" type="submit" value="Add Item">
 </form>
 <form action="/">
-  <input class="four columns" type="submit" value="Main Menu">
+  <input class="twelve columns" type="submit" value="Main Menu">
 </form>
